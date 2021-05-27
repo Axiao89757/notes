@@ -104,6 +104,7 @@ git config --system --list
 git config --global --list
 # 查看当前仓库的配置
 git config --local --list
+## 覆盖顺序 local > global > system
 
 #设置
 git config --global 配置项 配置值
