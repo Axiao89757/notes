@@ -71,31 +71,50 @@
        conda list -n 环境名
        ```
 
+       ## 3. 镜像
+
+       参考 [Python- 解决PIP下载安装速度慢_wukai0909的博客-CSDN博客_pip 下载太慢](https://blog.csdn.net/wukai0909/article/details/62427437)
+
+       1. 临时使用
+
+          ```bash
+          # 临时使用 https://pypi.tuna.tsinghua.edu.cn/simple 镜像安装 pyspider
+          pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyspider
+          ```
+       
+       **一些镜像**
+
+> 1. 清华：https://pypi.tuna.tsinghua.edu.cn/simple
+> 2. 阿里云：http://mirrors.aliyun.com/pypi/simple/
+> 3. 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+> 4. 华中理工大学：http://pypi.hustunique.com/
+> 5. 山东理工大学：http://pypi.sdutlinux.org/ 
+> 6. 豆瓣：http://pypi.douban.com/simple/
+
 
 # 其他
 
 ## 1. 把 jupyter notebook 放在后台运行
 
 1. 启动
-
     ```bash
-# 运行 jupyter notebook 查看运行在哪个端口
+    # 运行 jupyter notebook 查看运行在哪个端口
     jupyter notebook
     # ctrl c 杀掉当前的 jupyter notebook
-    # 把 jupyter notebook 放到后台
+    # 1把 jupyter notebook 放到后台
     nohup jupyter notebook &
+    # 2把 jupyter notebook 放到后台，有输出写入到文件
+    nohup jupyter notebook --allow-root > jupyter.log 2>&1 &
     # 浏览器 vy-desktop:端口号 启动网页 jupyter
     ```
-
+    
 2. 关闭
 
     ```bash
     # 查看 PID
-    ## 若 shell 害活着
+    ## 若 shell 还活着
     jobs -l
     ## 若 shell 死了，根据时间去筛选
     ps ux | grep jupyter notebook
     ```
-
-    
 
