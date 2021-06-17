@@ -91,6 +91,15 @@
 > 5. 山东理工大学：http://pypi.sdutlinux.org/ 
 > 6. 豆瓣：http://pypi.douban.com/simple/
 
+# jupyter
+
+## 添加内核
+
+```bash
+python -m ipykernel install --name 环境名 --display-name "Python2.7"
+```
+
+
 
 # 其他
 
