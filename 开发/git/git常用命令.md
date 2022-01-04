@@ -2,7 +2,7 @@
 
 ## 1. 查看分支
 
-```javascript
+```bash
 # 查看本地分支
 git branch
 # 查看远程分支
@@ -13,7 +13,7 @@ git branch -a
 
 ## 2. 操作分支
 
-```javascript
+```bash
 # 创建分支
 git branch 分支名
 # 切换分支，本地没有远程有，则本地创建同名分支并切换过去
@@ -28,7 +28,7 @@ git merge 分支名
 
 ## 3. 分支改名
 
-```javascript
+```bash
 # 本地分支改名
 git branch -m 老名字 新名字
 # 将重命名后的分支推送到远程
@@ -39,14 +39,14 @@ git push --delete origin 老分支名
 
 显示如下说明成功
 
-```javascript
+```bash
 To http://11.11.11.11/demo/demo.git
  - [deleted]           oleName
 ```
 
 ## 4. 删除远程分支
 
-```javascript
+```bash
 # 删除远程分支，删除后还需推送到服务器
 git branch -d -r 分支名
 # 删除后推送至服务器
@@ -60,7 +60,7 @@ git push --delete 远程仓库名 老分支名
 
 # 二、 远程相关
 
-```javascript
+```bash
 # 查看远程仓库
 git remote
 # 查看远程仓库详细地址信息
@@ -79,7 +79,7 @@ git pull
 
 # 三、操作流程
 
-```javascript
+```bash
 # 添加
 git add .
 # 提交
@@ -95,7 +95,7 @@ git push
 
 # 四、config
 
-```javascript
+```bash
 # 配置指令
 git config
 # 查看系统配置
@@ -114,13 +114,29 @@ git config --global 配置项 配置值
 
 # 五、版本退回
 
-```git
+```bash
 # 查看 commit 日志
 git log
 # 查看所有操作对应的id
 git reflog
 # 退到/进到 指定commit的sha码 commit_id:239afed0857cc2e77c17c01014077808619af64d
 git reset --hard commit_id
+```
+
+# 六、标签
+
+作用：版本发布
+
+```bash
+# 创建一个标签（-a：标签名；-m：标签消息）
+git tag -a v1.0.0 -m "my first annotated tag"
+# 展示标签信息
+git tag
+git show 标签名
+# 推送标签
+git push origin v1.0.0
+# 推送多个标签
+git push origin --tags
 ```
 
 
