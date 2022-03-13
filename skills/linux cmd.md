@@ -1,6 +1,6 @@
 # 文件相关
 
-## mv a b
+## 1. mv a b
 
 **总结**
 
@@ -19,4 +19,13 @@ mv /home/usr/dog/d1.jpg /home/usr/dog2022/dog1.jpg
 mv /home/usr/dog/* /home/usr/dog2022
 # 移动文件夹
 mv /home/usr/dog /home/usr/dog2022
+```
+
+## 2. rm
+
+```bash
+# 删除文件夹
+rm -rf /home/usr/dog/d1.jpg
+# 删除文件
+rm -f /home/usr/dog
 ```
